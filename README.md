@@ -296,8 +296,11 @@ python manage.py rebuild_index
 ```
 
 ### 测试一下效果：
+
 ####输入搜索
+
 ![](http://www.seczh.com/doc/Public/Uploads/2018-04-03/5ac2fcffe45b2.png)
 
 ####返回结果
+
 ![](http://www.seczh.com/doc/Public/Uploads/2018-04-03/5ac2fd20e2f6d.png)
