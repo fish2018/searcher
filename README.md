@@ -238,6 +238,7 @@ color: red;
 ```
 
 效果如图：
+
 ![](http://www.seczh.com/doc/Public/Uploads/2018-04-03/5ac31c1b2982c.png)
 
 9、指定索引模板文件
