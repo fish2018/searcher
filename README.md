@@ -76,7 +76,7 @@ from django.shortcuts import render
 def full_search(request):
     sform = SearchForm(request.GET)
     posts = sform.search()
-    return render(request,'search/s.html',{'posts':posts,'form':sform})
+    return render(request,'search/s.html',{'form':sform})
 ```
 6、添加搜索页面 blog/templates/search/s.html
 ```
