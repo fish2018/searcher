@@ -281,6 +281,7 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 6
 ```
 其他引擎配置参考[官方文档](http://django-haystack.readthedocs.io/en/v2.4.1/tutorial.html#configuration "官方文档")
+
 11、同步数据库
 ```
 python manager.py makemigrations
