@@ -6,5 +6,4 @@ from django.shortcuts import render
 
 def full_search(request):
     sform = SearchForm(request.GET)
-    posts = sform.search()
     return render(request,'search/s.html',{'posts':posts,'form':sform})
