@@ -200,7 +200,7 @@ class MySeachView(SearchView):
 	template = 'search_result.html'
     def extra_context(self):       #重载extra_context来添加额外的context内容  
         context = super(MySeachView,self).extra_context()  
-        side_list = Note.objects.filter(title__contains='文章').order_by('add_date')[:8]  
+        side_list = Note.objects.filter(title__contains='文章').order_by('id')[:8]  
         context['side_list'] = side_list  
         return context  
 ```
