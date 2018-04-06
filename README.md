@@ -53,11 +53,7 @@ class Note(models.Model):
     def __str__(self):
         return self.title
 ```
-同步数据库
-```
-python manager.py makemigrations
-python migrate
-```
+
 4、在blog应用目录下，添加一个索引
 编辑blog/search_indexes.py
 ```
@@ -127,7 +123,7 @@ def full_search(request):
 </html>
 ```
 这里的`form`用的`haystack.forms中的SearchForm`,同普通django form用法差不多。
-这里`name="q"`是搜索框架中view使用到的，详情查看源码
+这里`name="q"`是搜索框架中view使用到的，详情查看源码或官方文档
 
 7、编辑项目的urls.py
 ```
@@ -285,11 +281,13 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 6
 ```
 其他引擎配置参考[官方文档](http://django-haystack.readthedocs.io/en/v2.4.1/tutorial.html#configuration "官方文档")
-
-
-
-11、数据库blog_note表插入数据（略）
-12、生成索引
+11、同步数据库
+```
+python manager.py makemigrations
+python migrate
+```
+12、数据库blog_note表插入数据（略）
+13、生成索引
 手动生成一次索引：
 ```
 python manage.py rebuild_index
@@ -304,3 +302,8 @@ python manage.py rebuild_index
 ####返回结果
 
 ![](http://www.seczh.com/doc/Public/Uploads/2018-04-03/5ac2fd20e2f6d.png)
+
+
+
+其他中文分词工具：
+https://www.cnblogs.com/qqhfeng/p/5321949.html
